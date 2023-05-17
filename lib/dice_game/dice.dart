@@ -28,7 +28,7 @@ class _DicepageState extends State<DicePage> {
                   onPressed: () {
                     click();
                   },
-                  child: Image.asset('images/dice$leftdice.png', width: 100, height: 100,),
+                  child: Image.asset('assets/images/dice$leftdice.png', width: 100, height: 100,),
                 ))
           ],
         ),

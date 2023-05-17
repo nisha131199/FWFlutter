@@ -3,6 +3,7 @@ import 'package:baba_black_sheep/dice_game/dice.dart';
 import 'lwidgets/lDay1/stateful_screen.dart';
 import 'lwidgets/lDay1/stateless_screen.dart';
 import 'package:flutter/material.dart';
+import 'lwidgets/lDay3/rownd_splash.dart';
 
 void main() => runApp(
   const MaterialApp(
@@ -11,7 +12,8 @@ void main() => runApp(
     // home: StatelessScreen(),
     // home: StatefulScreen(),
     // home: DicePage(),
-    home: TextFields(),
+    // home: TextFields(),
+    home: RowndSplash(),
   ),
 );
 
