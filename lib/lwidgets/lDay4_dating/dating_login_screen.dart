@@ -1,0 +1,147 @@
+import 'package:baba_black_sheep/constants.dart';
+import 'package:flutter/material.dart';
+
+import 'dating_mobile_login_screen.dart';
+
+class DatingLoginScreen extends StatelessWidget {
+  const DatingLoginScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: double.infinity,
+      child: Stack(
+        children: [
+          Image.asset(
+            "assets/images/dating_login.jpg",
+            fit: BoxFit.cover,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+          ),
+          Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height/2,
+                child: Image.asset(
+                    "assets/images/dating_login_top.png",
+                    fit: BoxFit.fill
+                ),
+              ),
+              const SizedBox(height: 15),
+              const Center(
+                child: Text(
+                  "SoZial",
+                  style: TextStyle(
+                      fontSize: 60,
+                      color: Colors.white,
+                      fontFamily: proximaB,
+                      decoration: TextDecoration.none
+                  ),
+                ),
+              ),
+              Container(
+                alignment: Alignment.center,
+                margin: const EdgeInsets.only(left: 43, right: 43),
+                height: MediaQuery.of(context).size.height/3,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    GestureDetector(
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 20),
+                        width: MediaQuery.of(context).size.width,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(40)),
+                          color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 12, right: 12, top: 8, bottom: 8),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/images/dating_login_phone_ic.png",
+                                width: 32,
+                                height: 32,
+                              ),
+                              const SizedBox(width: 16),
+                              const Text(
+                                loginWithPhoneText,
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontFamily: "urbanistR",
+                                    decoration: TextDecoration.none
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        moveToLoginWithPhoneScreen(context);
+                      },
+                    ),
+                    GestureDetector(
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 40),
+                        width: MediaQuery.of(context).size.width,
+                        decoration: const BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(40)),
+                          color: Colors.white,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 12, right: 12, top: 8, bottom: 8),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                "assets/images/dating_login_phone_ic.png",
+                                width: 32,
+                                height: 32,
+                              ),
+                              const SizedBox(width: 16),
+                              const Text(
+                                signupWithPhoneText,
+                                style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.black,
+                                    fontFamily: "urbanistR",
+                                    decoration: TextDecoration.none
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                      onTap: () {
+                        moveToSignUpWithPhoneScreen(context);
+                      },
+                    ),
+                    const Text(
+                      termsPolicy,
+                      style: TextStyle(
+                          fontSize: 14,
+                          fontFamily: urbanistR,
+                          color: Colors.white,
+                          decoration: TextDecoration.none
+                      ),
+                    )
+                  ],
+                ),
+              )
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+
+moveToLoginWithPhoneScreen(context) {
+  Navigator.of(context).push(
+      MaterialPageRoute(builder: (context) => const DatingMobileLogin()));
+}
+
+moveToSignUpWithPhoneScreen(context) {
+  // Navigator.of(context).push(
+  //     MaterialPageRoute(builder: (context) => const DatingMobileSignUp()));
+}

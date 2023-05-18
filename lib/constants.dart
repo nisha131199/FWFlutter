@@ -1,0 +1,11 @@
+const String deliusR = "Delius Swash Caps";
+const String proximaB = "Proxima";
+const String urbanistR = "Urbanist";
+const String termsPolicy = "By clicking “Log in” you agree with our Terms. Learn how we process your data in our Privacy Policy and Terms Conditions.";
+const String loginWithPhoneText = "LOG IN WITH PHONE NUMBER";
+const String signupWithPhoneText = "SIGN UP WITH PHONE NUMBER";
+const String myNoIs = "My number is";
+const String validPhoneDes = "Please enter your valid phone number. We will send you a 5-digit code to verify your account.";
+const String continuee = "CONTINUE";
+const String verifyOtp = "Verify OTP";
+const String verifyOtpDes = "Please enter verification code. You have received your mobile number.";

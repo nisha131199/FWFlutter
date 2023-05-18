@@ -28,3 +28,9 @@ flutter:
     - family: Delius Swash Caps
       fonts:
         - asset: assets/fonts/delius_swash_caps_regular.ttf
+    - family: Proxima
+      fonts:
+        - asset: assets/fonts/proxima_nova_soft_bold.otf
+    - family: Urbanist
+      fonts:
+        - asset: assets/fonts/urbanist_regular.ttf
