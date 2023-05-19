@@ -1,17 +1,18 @@
-import 'package:baba_black_sheep/constants.dart';
 import 'package:flutter/material.dart';
+import '../../constants.dart';
 
-class DatingMobileLogin extends StatefulWidget {
-  const DatingMobileLogin({super.key});
+class DatingMobileSignUp extends StatefulWidget {
+  const DatingMobileSignUp({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _PhoneLogin();
+    return _MobileSignup();
   }
 }
 
-class _PhoneLogin extends State<DatingMobileLogin> {
-  var phone = "", isVisible = false;
+class _MobileSignup extends State<DatingMobileSignUp> {
+  var isVisible = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,16 +34,71 @@ class _PhoneLogin extends State<DatingMobileLogin> {
                 ),
               ),
             ),
-            const SizedBox(height: 11),
-            Center(
-              child: Image.asset(
-                "assets/images/dating_login_with_phone_ic.png",
-                width: 72,
-                height: 127,
+            const Padding(
+              padding: EdgeInsets.only(top: 46, left: 24),
+              child: Text(
+                signUpTitle,
+                style: TextStyle(
+                    fontSize: 24,
+                    color: Colors.black,
+                    fontFamily: proximaB
+                ),
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 32, left: 24, right: 24),
+              padding: EdgeInsets.only(top: 10, left: 24, right: 24),
+              child: Text(
+                name,
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Color.fromRGBO(0, 0, 0, 0.7),
+                    fontFamily: urbanistR
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, left: 24, right: 24),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(29)),
+                    border: Border.all(
+                        color: Colors.black12,
+                        width: 1
+                    )
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
+                  child: Stack(
+                    children: [
+                      Image.asset(
+                        "assets/images/uname_ic.png",
+                        width: 23,
+                        height: 23,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(left: 30),
+                        child: const TextField(
+                            keyboardType: TextInputType.emailAddress,
+                            // maxLength: 10,
+                            decoration: InputDecoration.collapsed(
+                              hintText: "",
+                              border: InputBorder.none,
+                            ),
+                            style: TextStyle(
+                                color: Colors.black,
+                                fontFamily: urbanistR,
+                                fontSize: 18
+                            )
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 10, left: 24, right: 24),
               child: Text(
                 mobileNo,
                 style: TextStyle(
@@ -53,7 +109,7 @@ class _PhoneLogin extends State<DatingMobileLogin> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 10, left: 24, right: 24),
+              padding: const EdgeInsets.only(top: 5, left: 24, right: 24),
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
@@ -92,25 +148,64 @@ class _PhoneLogin extends State<DatingMobileLogin> {
                         padding: const EdgeInsets.only(left: 20, right: 10),
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width/2,
-                          child: TextField(
+                          child: const TextField(
                             keyboardType: TextInputType.number,
                             // maxLength: 10,
-                            decoration: const InputDecoration.collapsed(
+                            decoration: InputDecoration.collapsed(
                               hintText: "",
                               border: InputBorder.none,
                             ),
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 16,
                                 fontFamily: urbanistR,
                                 color: Colors.black
                             ),
-                            onChanged: (var str) {
-                              phone = str;
-                            },
+                            // onChanged: (var str) {
+                            //   phone = str;
+                            // },
                           ),
                         ),
                       ),
                     ],
+                  ),
+                ),
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(top: 10, left: 24, right: 24),
+              child: Text(
+                dob,
+                style: TextStyle(
+                    fontSize: 14,
+                    color: Color.fromRGBO(0, 0, 0, 0.7),
+                    fontFamily: urbanistR
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 5, left: 24, right: 24),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(29)),
+                    border: Border.all(
+                        color: Colors.black12,
+                        width: 1
+                    )
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.only(left: 20, right: 20, top: 15, bottom: 15),
+                  child: TextField(
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration.collapsed(
+                        hintText: dobFormat,
+                        border: InputBorder.none,
+                      ),
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: urbanistR,
+                          fontSize: 18
+                      )
                   ),
                 ),
               ),
@@ -194,7 +289,7 @@ class _PhoneLogin extends State<DatingMobileLogin> {
                   child: const Padding(
                     padding: EdgeInsets.only(top: 18, bottom: 18),
                     child: Text(
-                      signIn,
+                      signup,
                       style: TextStyle(
                           fontSize: 18,
                           color: Colors.white,
@@ -205,7 +300,7 @@ class _PhoneLogin extends State<DatingMobileLogin> {
                   ),
                 ),
                 onTap: () {
-                  moveToNextScreen(context);
+                  moveToCreateProfileScreen(context);
                 },
               ),
             ),
@@ -216,9 +311,9 @@ class _PhoneLogin extends State<DatingMobileLogin> {
   }
 }
 
-moveToNextScreen(context) {
+moveToCreateProfileScreen(context) {
   // Navigator.of(context).push(
-  //     MaterialPageRoute(builder: (context) => const ScreenName()));
+  //     MaterialPageRoute(builder: (context) => const NextScreen()));
 }
 
 back(context) {
