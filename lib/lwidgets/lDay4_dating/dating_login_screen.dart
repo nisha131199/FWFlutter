@@ -29,7 +29,7 @@ class DatingLoginScreen extends StatelessWidget {
                       fit: BoxFit.fill
                   ),
                 ),
-                const SizedBox(height: 15),
+                SizedBox(height: MediaQuery.of(context).size.height/14),
                 const Center(
                   child: Text(
                     "Baba Black Sheep",
@@ -41,12 +41,12 @@ class DatingLoginScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+                SizedBox(height: MediaQuery.of(context).size.height/90),
                 Container(
-                  alignment: Alignment.center,
-                  margin: const EdgeInsets.only(left: 43, right: 43),
+                  margin:  EdgeInsets.only(left: MediaQuery.of(context).size.width/4, right: MediaQuery.of(context).size.width/4),
                   height: MediaQuery.of(context).size.height/3,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       GestureDetector(
                         child: Container(
