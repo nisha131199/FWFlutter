@@ -5,6 +5,7 @@ import 'lwidgets/lDay1/stateless_screen.dart';
 import 'package:flutter/material.dart';
 import 'lwidgets/lDay3/rownd_splash.dart';
 import 'lwidgets/lDay4_dating/dating_splash_screen.dart';
+import 'lwidgets/lDay6_lApi/learning_api.dart';
 
 void main() => runApp(
   const MaterialApp(
@@ -15,7 +16,8 @@ void main() => runApp(
     // home: DicePage(),
     // home: TextFields(),
     // home: RowndSplash(),
-    home: DatingSplash(),
+    // home: DatingSplash(),
+    home: LApi(),
   ),
 );
 
