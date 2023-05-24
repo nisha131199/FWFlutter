@@ -12,3 +12,7 @@ const String dob = "* Date of birth";
 const String dobFormat = "M M / D D / Y Y Y Y";
 const String password = "* Password";
 const String signup = "Sign Up";
+
+
+///Api End points
+const String productsEndPoint = "posts";

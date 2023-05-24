@@ -1,13 +1,14 @@
+import 'package:baba_black_sheep/data/repository/api_repository.dart';
 import 'package:flutter/material.dart';
 import '../../data/model/product.dart';
-import '../../data/network/service.dart';
 
 class LApi extends StatefulWidget {
   const LApi({super.key});
 
   @override
   State<StatefulWidget> createState() {
-    return _Api(products: fetchProducts());
+    // return _Api(products: fetchProducts());
+    return _Api(products: ApiRepository().fetchProducts());
   }
 }
 
@@ -91,6 +92,7 @@ class ProductPage extends StatelessWidget {
     );
   }
 }
+
 class ProductBox extends StatelessWidget {
   ProductBox({Key? key, required this.item}) : super(key: key);
   final Product item;

@@ -43,7 +43,7 @@ class DatingLoginScreen extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height/90),
                 Container(
-                  margin:  EdgeInsets.only(left: MediaQuery.of(context).size.width/4, right: MediaQuery.of(context).size.width/4),
+                  margin:  EdgeInsets.only(left: MediaQuery.of(context).size.width/10, right: MediaQuery.of(context).size.width/10),
                   height: MediaQuery.of(context).size.height/3,
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
