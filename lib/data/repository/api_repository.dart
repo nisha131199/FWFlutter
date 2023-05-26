@@ -19,7 +19,7 @@ class ApiRepository {
     if (response.status) {
       return parseProducts(response.response);
     } else {
-      throw Exception('Unable to fetch products from the REST API');
+      throw Exception("Unable to fetch products from the REST API");
     }
   }
 }

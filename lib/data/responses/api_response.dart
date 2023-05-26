@@ -5,5 +5,8 @@ class ApiResponse {
   final String message;
   final Response? response;
 
-  ApiResponse(this.status, this.message, this.response);
+  ApiResponse(
+      this.status,
+      this.message,
+      this.response);
 }

@@ -7,6 +7,7 @@ class LApi extends StatefulWidget {
 
   @override
   State<StatefulWidget> createState() {
+    //directly with http request
     // return _Api(products: fetchProducts());
     return _Api(products: ApiRepository().fetchProducts());
   }

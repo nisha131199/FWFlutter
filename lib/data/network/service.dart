@@ -23,13 +23,14 @@ class Service {
           baseUrl: baseurl.isEmpty ? baseURL : baseurl, connectTimeout: 30000, receiveTimeout: 30000);
       return Dio(options)
         ..interceptors.add(LogInterceptor())
-        ..interceptors.add(PrettyDioLogger(
-          requestHeader: true,
-          requestBody: true,
-          responseBody: true,
-          responseHeader: true,
-          compact: false,
-        ))
+        ..interceptors.add(
+            PrettyDioLogger(
+              requestHeader: true,
+              requestBody: true,
+              responseBody: true,
+              responseHeader: true,
+              compact: false,
+            ))
         ..interceptors.add(InterceptorsWrapper(onRequest: (options, handler) {
           return handler.next(options); //continue
         }, onResponse: (response, handler) async {
